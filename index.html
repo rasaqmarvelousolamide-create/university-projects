@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marvelous Rasaq – Computer Science Portfolio</title>
+<style>
+:root{--bg:#fafaf7;--card:#fff;--text:#1d2433;--muted:#5b6475;--accent:#1f6feb;--line:#e3e5ea;--warn:#fff4d6;--warnt:#6b4e00;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12151c;--card:#1a1f2a;--text:#e8eaf0;--muted:#a0a8b8;--accent:#6aa5ff;--line:#2a3140;--warn:#3a3014;--warnt:#f0d78a}}
+:root[data-theme="dark"]{--bg:#12151c;--card:#1a1f2a;--text:#e8eaf0;--muted:#a0a8b8;--accent:#6aa5ff;--line:#2a3140;--warn:#3a3014;--warnt:#f0d78a}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--card);border-bottom:1px solid var(--line);display:flex;gap:16px;padding:12px 20px;overflow-x:auto;white-space:nowrap}
+nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}
+nav a:hover{color:var(--accent)}
+main{max-width:860px;margin:0 auto;padding:0 20px 48px}
+section{padding:36px 0 8px}
+h1{font-size:2.2rem;margin:.2em 0}
+h2{font-size:1.4rem;border-bottom:2px solid var(--accent);display:inline-block;padding-bottom:4px;margin:0 0 16px}
+h3{margin:0 0 6px;font-size:1.1rem}
+.tag{color:var(--accent);font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:14px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.pill{display:inline-block;background:var(--bg);border:1px solid var(--line);border-radius:99px;padding:2px 12px;margin:2px 4px 2px 0;font-size:.85rem}
+.todo{background:var(--warn);color:var(--warnt);border-radius:8px;padding:8px 12px;font-size:.9rem;margin-top:8px}
+a{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:600}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 20px}
+</style>
+</head>
+<body>
+<nav><a href="#home">Home</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#cv">CV</a><a href="#profiles">Profiles</a></nav>
+<main>
+
+<section id="home">
+<p class="tag">Computer Science undergraduate · University of Dundee</p>
+<h1>Marvelous Rasaq</h1>
+<p>I’m a Computer Science student in Dundee aiming for a career as a junior software engineer. I’m building my technical skills in Java, C and C++ and working with web technologies, and I bring real workplace experience in sales, reception and warehouse teams, where I learned to communicate clearly, stay organised under pressure and work reliably as part of a team.</p>
+<p>I learn quickly, I’m happy to ask questions when I’m stuck, and I want to grow in a collaborative engineering team.</p>
+<a class="btn" href="#projects">See my work</a>
+</section>
+
+<section id="projects">
+<h2>Work samples</h2>
+<div class="card">
+<h3>Project 1: Lottery Simulator</h3>
+<p><strong>Description:</strong> A Java console program that lets the user enter six unique numbers between 1 and 50, draws six unique random numbers, counts the matches, saves both sets to a text file, then reads the file back to check the saved data.</p>
+<p><strong>Technologies:</strong> <span class="pill">Java</span> <span class="pill">java.util</span> <span class="pill">java.io</span> <span class="pill">BlueJ</span></p>
+<p><strong>My role:</strong> Sole developer for the University of Dundee module ICI10040. I designed the program structure, wrote the code, tested it and documented it in a report.</p>
+<p><strong>Challenges and skills gained:</strong> Random numbers can repeat, so I wrote a helper method that checks the array before accepting a number. Input validation (range, duplicates, non-numbers) and keeping user and drawn numbers separate in the saved file were the hardest parts. I solved them with labelled lines in the file and repeated testing. I gained experience in arrays, methods, file handling, error handling and debugging.</p>
+<p><a href="https://github.com/rasaqmarvelousolamide-create/university-projects">View the code on GitHub</a></p>
+</div>
+<div class="card">
+<h3>Project 2: User Login Hash Table</h3>
+<p><strong>Description:</strong> A C program that stores user IDs and passwords in a hash table. Users who land in the same bucket are kept in a linked list. It can register a new user, update an existing user’s password, find a user, check a login, load users from a file and free all memory.</p>
+<p><strong>Technologies:</strong> <span class="pill">C</span> <span class="pill">Linked lists</span> <span class="pill">Hash tables</span> <span class="pill">malloc / free</span></p>
+<p><strong>My role:</strong> I wrote the hash table functions in <code>hash_table.c</code>, including registration, lookup, password checking, file loading and cleanup.</p>
+<p><strong>Challenges and skills gained:</strong> I practised manual memory management, working with pointers and linked lists, checking for NULL pointers, and validating input such as user ID range and password length.</p>
+<p><a href="https://github.com/rasaqmarvelousolamide-create/university-projects">View the code on GitHub</a> (built on starter code provided by the module)</p>
+</div>
+<div class="card">
+<h3>Project 3: Fitness Tracker</h3>
+<p><strong>Description:</strong> A menu-driven Java console program with two features. It turns a step count into readable text (for example, thousands, hundreds and tens), and it converts a distance in kilometres into an estimated number of steps.</p>
+<p><strong>Technologies:</strong> <span class="pill">Java</span> <span class="pill">Object-oriented programming</span> <span class="pill">Scanner</span></p>
+<p><strong>My role:</strong> I wrote all three classes: <code>UserInterfaceMain</code> for the menu, <code>StepStats</code> for storing and formatting step data, and <code>Distance</code> for the conversion.</p>
+<p><strong>Challenges and skills gained:</strong> I practised splitting a program into classes with private fields, constructors and methods, and one method returns a <code>StepStats</code> object. I also worked on building formatted output, with correct singular and plural wording, and on a repeating menu loop that handles invalid choices.</p>
+<p><a href="https://github.com/rasaqmarvelousolamide-create/university-projects">View the code on GitHub</a></p>
+</div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<h3>Technical</h3>
+<div class="card">
+<span class="pill">Java</span><span class="pill">C</span><span class="pill">C++</span><span class="pill">HTML</span><span class="pill">Microsoft Word</span><span class="pill">Excel</span><span class="pill">PowerPoint</span>
+<p style="margin:10px 0 4px"><strong>Example: counting matches in Java (from my Lottery Simulator)</strong></p>
+<pre style="overflow-x:auto;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px;font-size:.85rem"><code>public static int countMatches(int[] arr1, int[] arr2) {
+    int matches = 0;
+    for (int num1 : arr1) {
+        for (int num2 : arr2) {
+            if (num1 == num2) {
+                matches++;
+                break; // count each number once
+            }
+        }
+    }
+    return matches;
+}</code></pre>
+</div>
+<h3>Transferable</h3>
+<div class="grid">
+<div class="card"><h3>Communication</h3><p>As a receptionist I welcomed visitors, answered calls and handled enquiries, creating a professional first impression for every contact.</p></div>
+<div class="card"><h3>Teamwork</h3><p>In a warehouse team I packed and arranged stock safely and worked with colleagues to meet daily targets.</p></div>
+<div class="card"><h3>Organisation</h3><p>In retail sales I contributed to sales targets, kept displays organised and processed payments accurately in a fast-paced setting.</p></div>
+<div class="card"><h3>Problem solving</h3><p>Managing bookings, schedules and records taught me to keep calm, prioritise and fix issues quickly.</p></div>
+</div>
+</section>
+
+<section id="cv">
+<h2>CV</h2>
+<div class="card">
+<p>My CV, tailored to a Junior Software Engineer role, is available to download as a PDF.</p>
+<a class="btn" href="Marvelous_Rasaq_CV.pdf" download>Download CV (PDF)</a>
+</div>
+</section>
+
+<section id="profiles">
+<h2>Professional profiles</h2>
+<div class="card">
+<p>GitHub: <a href="https://github.com/rasaqmarvelousolamide-create">github.com/rasaqmarvelousolamide-create</a><br>LinkedIn: <a href="https://www.linkedin.com/in/marvelous-rasaq-a8511944b/">linkedin.com/in/marvelous-rasaq-a8511944b</a><br>Email: <a href="mailto:Rmarvel949@gmail.com">Rmarvel949@gmail.com</a></p>
+</div>
+</section>
+
+</main>
+<footer>© 2026 Marvelous Rasaq</footer>
+</body>
+</html>
